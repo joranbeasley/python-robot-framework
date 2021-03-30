@@ -21,3 +21,10 @@ Example of connecting to Lambdatest via Robot Framework
 	Click button  id:addbutton
 	${response}    Get Text    xpath=/html/body/div/div/div/ul/li[6]/span
 	Should Be Equal As Strings    ${response}    Yey Let's add it to list
+
+Example of connecting to Google
+    Go To     https://www.google.com
+    Wait Until Element Is Visible    css:input
+    Input Text   css:input     cat videos
+    Click Element    //input[@value="Google Search"]
+    Sleep   10
